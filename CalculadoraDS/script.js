@@ -46,31 +46,79 @@ function keyboardInputHandler(e) {
   // funcao para formatar o teclado com os inputs
   //vou buscar o visor
   visor = document.getElementById('visor');
-
+  let visorultInput = visor.value;
   //numeros
 
   if (e.key === '0') {
-    visor.value += '0';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '0');
+    } else {
+      visor.value += '0';
+    }
   } else if (e.key === '1') {
-    visor.value += '1';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '1');
+    } else {
+      visor.value += '1';
+    }
   } else if (e.key === '2') {
-    visor.value += '2';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '2');
+    } else {
+      visor.value += '2';
+    }
   } else if (e.key === '3') {
-    visor.value += '3';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '3');
+    } else {
+      visor.value += '3';
+    }
   } else if (e.key === '4') {
-    visor.value += '4';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '4');
+    } else {
+      visor.value += '4';
+    }
   } else if (e.key === '5') {
-    visor.value += '5';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '5');
+    } else {
+      visor.value += '5';
+    }
   } else if (e.key === '6') {
-    visor.value += '6';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '6');
+    } else {
+      visor.value += '1';
+    }
   } else if (e.key === '7') {
-    visor.value += '7';
-  } else if (e.key === '7') {
-    visor.value += '7';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '7');
+    } else {
+      visor.value += '7';
+    }
   } else if (e.key === '8') {
-    visor.value += '8';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '8');
+    } else {
+      visor.value += '8';
+    }
   } else if (e.key === '9') {
-    visor.value += '9';
+    if (visor.value === '0') {
+      (visor.value = visorultInput.substring(0, visor.value.length - 1)),
+        (visor.value += '9');
+    } else {
+      visor.value += '9';
+    }
   }
 
   //operadores
