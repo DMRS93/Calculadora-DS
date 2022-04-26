@@ -12,18 +12,18 @@ const BtnEq = document // funcao para executar a operaçao de =
   .querySelector('.equal')
   .addEventListener('click', function () {
     let igualA = visor.value;
-
     let output = eval(igualA);
-
-    visor.value = output;
-
-    if (output === Infinity) {
-      visor = 'NaN';
-    }
-    if (output === -Infinity) {
-      visor = 'NaN';
+    if (output === Infinity || output === -Infinity) {
+      // se divisao por 0
+      visor.value = 'NaN';
+    } else {
+      visor.value = output;
     }
   });
+
+/* if (e * 0 || e / 0 || 0 * e || 0 / e) {
+  visor.value === 'Nan';
+} */
 
 for (let i = 0; i < inputNum.length; i++) {
   // funcao para quando carregar nos botoes dos numeros, eles aparecerem no visor
@@ -48,6 +48,8 @@ function keyboardInputHandler(e) {
   visor = document.getElementById('visor');
   let visorultInput = visor.value;
   //numeros
+
+  console.log(e.key);
 
   if (e.key === '0') {
     if (visor.value === '0') {
